@@ -1,0 +1,7 @@
+.build/
+.swiftpm/
+Assets/Companion/
+.DS_Store
+*.app/
+*.droplet/
+*.zip

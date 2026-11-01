@@ -1,0 +1,17 @@
+{
+  "id": "folder-preview-droplet",
+  "name": "Folder Preview Droplet",
+  "version": "1.0.0",
+  "summary": "Dossiers et archives dans Quick Look, en liste ou icônes",
+  "description": "Prévisualisation native des dossiers et archives depuis le Finder : arborescence dépliable, grille de miniatures, colonnes configurables, chemin, taille et nombre d’éléments. Inclut le composant macOS qui héberge l’extension Quick Look.",
+  "category": "Productivity",
+  "kit": { "abi": 1, "minAPI": "1.9.0" },
+  "minAppVersion": "15.3.0",
+  "capabilities": [],
+  "surfaces": ["settings-pane"],
+  "icon": "FolderPreviewDroplet.icon",
+  "creator": { "name": "Nicolas Dellimuti", "kind": "community", "avatar": "Creator.png" },
+  "source": { "repository": "https://github.com/Nicolasdellim/folder-preview-droplet", "license": "MIT" },
+  "screenshots": [],
+  "keywords": ["Finder", "Quick Look", "folder", "archive", "preview", "SVG", "PDF"]
+}

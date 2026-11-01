@@ -1,0 +1,28 @@
+Folder Preview Droplet — installation
+
+1. Importez FolderPreviewDroplet.droplet dans Droppy, depuis les droplets locaux.
+2. Autorisez ce build local quand Droppy vous le demande.
+3. Dans ses réglages, cliquez Installer / ouvrir.
+   Le composant inclus s’installe dans ~/Applications/Folder Preview Droplet.app.
+4. Activez Folder Preview Droplet dans les extensions Coup d’œil / Quick Look
+   des Réglages Système. Sur les macOS récents : Général → Ouverture et extensions.
+5. Dans Finder, sélectionnez un dossier ou une archive puis pressez Espace ou ⌘Y.
+
+Le menu ⚙︎ en bas permet de passer de la liste arborescente à la grille,
+de régler les miniatures et le texte. Un clic droit sur les en-têtes règle
+les colonnes ; un clic droit sur les éléments propose Copier et Copier le chemin.
+Le curseur inférieur règle la taille des icônes en grille.
+
+La fenêtre, sa fermeture, son plein écran et ses commandes système restent
+ceux du vrai Quick Look de macOS. Aucun raccourci global n’est intercepté.
+
+Les binaires sont des builds personnels signés ad hoc, sans notarisation
+Apple. Une copie téléchargée peut demander une autorisation macOS.
+Ne désactivez pas globalement Gatekeeper.
+
+Pour désinstaller, désactivez l’extension dans macOS, retirez le composant
+hôte puis le droplet dans Droppy. La désactivation du droplet seul laisse
+l’extension système installée.
+
+Analyse, sources et limites :
+https://github.com/Nicolasdellim/folder-preview-droplet
