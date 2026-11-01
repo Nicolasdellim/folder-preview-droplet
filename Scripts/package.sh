@@ -11,8 +11,11 @@ KIT="$STAGE/FolderPreviewDroplet-1.0.0"
 mkdir -p "$KIT"
 BUNDLE="$KIT/FolderPreviewDroplet.droplet"
 APP="$KIT/Folder Preview Droplet.app"
-ditto --norsrc --noextattr "$ROOT/.build/native/Folder Preview Droplet.app" "$APP"
-ditto --norsrc --noextattr "$ROOT/.build/FolderPreviewDroplet.droplet" "$BUNDLE"
+# Copy the canonical bundle layout only. Cloud sync can leave conflict
+# directories such as "Contents 2" beside Contents in a scratch bundle.
+mkdir -p "$APP/Contents" "$BUNDLE/Contents"
+ditto --norsrc --noextattr "$ROOT/.build/native/Folder Preview Droplet.app/Contents" "$APP/Contents"
+ditto --norsrc --noextattr "$ROOT/.build/FolderPreviewDroplet.droplet/Contents" "$BUNDLE/Contents"
 rm -rf "$BUNDLE/Contents/Resources/Assets/Companion/Folder Preview Droplet.app"
 ditto --norsrc --noextattr "$APP" "$BUNDLE/Contents/Resources/Assets/Companion/Folder Preview Droplet.app"
 cp droplet.json "$BUNDLE/Contents/Resources/droplet.json"
