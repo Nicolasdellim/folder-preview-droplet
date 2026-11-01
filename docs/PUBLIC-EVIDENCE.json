@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-01",
+  "scope": "Public pages and screenshots only; no original binary.",
+  "screenshots": [
+    {
+      "url": "https://anybox.ltd/_next/static/media/fp-hero.2t0g0i4y9mvrt.png",
+      "sha256": "3a63dc8386e2c69dd8f7846d0a29e5acdc0e7f1eca9bde3f774a2d79e4eab200",
+      "purpose": "Public layout evidence, not bundled as product artwork."
+    },
+    {
+      "url": "https://anybox.ltd/_next/static/media/fp-hero-dark.3b95269z9-7ou.png",
+      "sha256": "59b2d59574b31b259c12bc63e22ccea328b43ee0ba808fedbcaba7a8b33164d2",
+      "purpose": "Public layout evidence, not bundled as product artwork."
+    },
+    {
+      "url": "https://anybox.ltd/_next/static/media/fp-feature-1.04dmxnqn9co3b.png",
+      "sha256": "35eb05a8a0b19c9843393a940ea845ebb67942237d8c5b4edf4cdc2053ba11c7",
+      "purpose": "Public layout evidence, not bundled as product artwork."
+    },
+    {
+      "url": "https://anybox.ltd/_next/static/media/fp-feature-2.2rp6r4xur-u3b.png",
+      "sha256": "a57299f168c4085415a98e779c69e43bb08860a987e521144f8a6b58dbcd494c",
+      "purpose": "Public layout evidence, not bundled as product artwork."
+    },
+    {
+      "url": "https://anybox.ltd/_next/static/media/fp-feature-3.2-hbiy5u9gjit.png",
+      "sha256": "7f271b57512b7b1692f1331c8048c22d05d880bd9bfb7f63c9fa937e2691b8b2",
+      "purpose": "Public layout evidence, not bundled as product artwork."
+    },
+    {
+      "url": "https://anybox.ltd/_next/static/media/fp-feature-4.1wqp7n_5vrt7m.png",
+      "sha256": "3f8928ade057429c4916ae5b65d226247558548829fbb376a3492cffb8b68a81",
+      "purpose": "Public layout evidence, not bundled as product artwork."
+    }
+  ]
+}
