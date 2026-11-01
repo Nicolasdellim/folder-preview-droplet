@@ -306,7 +306,7 @@ class PreviewController: NSViewController, NSOutlineViewDataSource, NSOutlineVie
         cell.textField?.stringValue = value(entry, column: type)
         if type == .name { cell.imageView?.image = thumbnails.image(entry, points: 20, scale: view.window?.backingScaleFactor ?? 2, archive: archive, enabled: options.thumbnails) }
         cell.toolTip = entry.name
-        if [.dimensions, .comments].contains(type) { thumbnails.loadMetadata(entry) }
+        if [.dimensions, .comments, .accessed].contains(type) { thumbnails.loadMetadata(entry) }
         return cell
     }
     private func value(_ entry: Entry, column: Column) -> String {
@@ -316,7 +316,7 @@ class PreviewController: NSViewController, NSOutlineViewDataSource, NSOutlineVie
         case .kind: return entry.kind
         case .modified: return entry.modified.map(dates.string) ?? "—"
         case .created: return entry.created.map(dates.string) ?? "—"
-        case .accessed: return entry.accessed.map(dates.string) ?? "—"
+        case .accessed: return thumbnails.metadata[entry.id]?.lastOpened.map(dates.string) ?? "—"
         case .added: return entry.added.map(dates.string) ?? "—"
         case .tags: return entry.tags.joined(separator: ", ")
         case .comments: return thumbnails.metadata[entry.id]?.comment ?? ""

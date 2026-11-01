@@ -1,0 +1,15 @@
+{
+  "source": "User-provided PNG",
+  "date": "2026-11-01",
+  "sha256": "592e1cd9c55775bda48b93dde3a4681465862415dcfa0e3dd530d54f9ee62c34",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "alpha": "Present; corner pixel alpha verified as 0.0",
+  "derived": [
+    "Assets/FolderPreviewDroplet.icns",
+    "FolderPreviewDroplet.icon/Assets/mark.png"
+  ],
+  "contentChanges": false
+}

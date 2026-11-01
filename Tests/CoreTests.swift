@@ -23,6 +23,13 @@ struct CoreTests {
         let sorted = Files.sorted(listing.entries, options: options)
         check(sorted[0].directory && !sorted[0].link, "Folders first")
         check(sorted.firstIndex(where: { $0.name == "fichier2.txt" })! < sorted.firstIndex(where: { $0.name == "fichier10.txt" })!, "Natural sorting")
+        let file2 = listing.entries.first(where: { $0.name == "fichier2.txt" })!
+        let file10 = listing.entries.first(where: { $0.name == "fichier10.txt" })!
+        var dateOptions = ViewOptions(); dateOptions.sort = .accessed
+        let dates = [file2.id: FileMetadata(lastOpened: Date(timeIntervalSince1970: 200)), file10.id: FileMetadata(lastOpened: Date(timeIntervalSince1970: 100))]
+        check(Files.sorted([file2, file10], options: dateOptions, metadata: dates).first?.id == file10.id, "Last-opened sort uses Spotlight metadata")
+        dateOptions.ascending = false
+        check(Files.sorted([file2, file10], options: dateOptions, metadata: dates).first?.id == file2.id, "Last-opened descending order")
         let read = try Files.read(sample.appendingPathComponent("fichier2.txt"))
         check(String(data: read, encoding: .utf8) == "deux", "Read-only regular file")
         do { _ = try Files.read(sample.appendingPathComponent("cycle")); preconditionFailure("Link followed") } catch { count += 1 }

@@ -46,7 +46,8 @@ Les dossiers ignorés sont identifiés par leur nom : sélectionnez un dossier p
 - Miniatures d’entrées d’archive : 50 Mo maximum par fichier. Copie depuis une archive : 10 000 éléments, 50 Mo par fichier et 256 Mo par opération. Une archive partielle ne permet pas de copier un dossier prétendument complet.
 - Une copie d’archive matérialise les fichiers dans un cache privé. Les entrées anciennes sont purgées lors d’un accès ultérieur au cache, après 24 h ; le collage dépend de leur conservation. Copier le chemin d’une entrée produit un chemin virtuel `archive:/entrée`.
 - Les archives chiffrées ou multi-volumes et certains codecs peuvent être refusés. La couverture effectivement testée est précisée dans [le rapport](docs/VALIDATION.md).
-- Les commentaires, dates et tags dépendent de ce que macOS fournit. Les dimensions SVG sont extraites des dimensions explicites ou du viewBox quand elles sont lisibles.
+- Les libellés du projet sont en français ; les formats de données suivent macOS. Les 38 langues de l’application originale ne sont pas reproduites.
+- Les commentaires, dates et tags dépendent de ce que macOS fournit. La dernière ouverture vient des métadonnées Spotlight, pas de la date d’accès du système de fichiers. Les dimensions SVG sont extraites des dimensions explicites ou du viewBox quand elles sont lisibles.
 - La priorité d’un fournisseur Quick Look est décidée par macOS. Les gestionnaires tiers ne sont pas certifiés par cette livraison.
 
 Désactiver le droplet ne désactive pas l’extension système. Pour désinstaller, désactivez l’extension dans macOS, retirez l’application hôte, puis retirez le droplet de Droppy.

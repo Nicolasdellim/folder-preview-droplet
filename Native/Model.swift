@@ -5,6 +5,7 @@ import Darwin
 struct FileMetadata: Sendable {
     var dimensions: String?
     var comment: String?
+    var lastOpened: Date?
     var pixelWidth: Int?
     var pixelHeight: Int?
     var area: Double { Double(pixelWidth ?? 0) * Double(pixelHeight ?? 0) }
@@ -167,7 +168,7 @@ enum Files {
                 comparison = x == y ? .orderedSame : x < y ? .orderedAscending : .orderedDescending
             case .modified: comparison = (a.modified ?? .distantPast).compare(b.modified ?? .distantPast)
             case .created: comparison = (a.created ?? .distantPast).compare(b.created ?? .distantPast)
-            case .accessed: comparison = (a.accessed ?? .distantPast).compare(b.accessed ?? .distantPast)
+            case .accessed: comparison = (metadata[a.id]?.lastOpened ?? .distantPast).compare(metadata[b.id]?.lastOpened ?? .distantPast)
             case .added: comparison = (a.added ?? .distantPast).compare(b.added ?? .distantPast)
             case .kind: comparison = a.kind.localizedStandardCompare(b.kind)
             case .comments: comparison = (metadata[a.id]?.comment ?? "").localizedStandardCompare(metadata[b.id]?.comment ?? "")

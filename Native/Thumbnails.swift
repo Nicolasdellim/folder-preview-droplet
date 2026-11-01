@@ -81,7 +81,10 @@ final class ThumbnailStore {
                         output.dimensions = "\(width.formatted()) × \(height.formatted())"; output.pixelWidth = width; output.pixelHeight = height
                     }
                 }
-                if let item = MDItemCreateWithURL(kCFAllocatorDefault, url as CFURL), let comment = MDItemCopyAttribute(item, kMDItemFinderComment) as? String { output.comment = comment }
+                if let item = MDItemCreateWithURL(kCFAllocatorDefault, url as CFURL) {
+                    output.comment = MDItemCopyAttribute(item, kMDItemFinderComment) as? String
+                    output.lastOpened = MDItemCopyAttribute(item, kMDItemLastUsedDate) as? Date
+                }
                 return output
             }.value
             guard let self, token == self.generation else { return }

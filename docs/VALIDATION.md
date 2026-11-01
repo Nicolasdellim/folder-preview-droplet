@@ -4,7 +4,7 @@ Validation effectuée le 1 novembre 2026 sur macOS 26.5, Xcode 26.6. Droppy inst
 
 | Contrôle | Résultat |
 | --- | --- |
-| Moteur, archives et sécurité des chemins | 37 vérifications réussies |
+| Moteur, archives et sécurité des chemins | 39 vérifications réussies |
 | Interface native claire | 9 contrôles réussis |
 | Interface native sombre | 9 contrôles réussis |
 | Quick Look — dossier racine | 11 éléments directs chargés |

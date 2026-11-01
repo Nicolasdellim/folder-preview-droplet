@@ -15,7 +15,7 @@ if let eye = NSImage(systemSymbolName: "eye.fill", accessibilityDescription: nil
     eye.withSymbolConfiguration(config)?.draw(in: NSRect(x: 615, y: 172, width: 230, height: 140))
 }
 icon.unlockFocus()
-try png(icon, to: root.appendingPathComponent("Assets/FolderPreviewDroplet.png"))
+if !FileManager.default.fileExists(atPath: root.appendingPathComponent("Assets/FolderPreviewDroplet.png").path) { try png(icon, to: root.appendingPathComponent("Assets/FolderPreviewDroplet.png")) }
 let drawing = NSImage(size: NSSize(width: 640, height: 400))
 drawing.lockFocus()
 NSColor(calibratedRed: 0.04, green: 0.11, blue: 0.2, alpha: 1).setFill(); NSBezierPath(rect: NSRect(x: 0, y: 0, width: 640, height: 400)).fill()

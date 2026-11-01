@@ -52,6 +52,8 @@ Le pied de fenêtre présente un chemin sous forme de composants, puis une rang�
 | Dossiers ignorés | Historique | Sélection d’un dossier, puis menu d’exclusion |
 | Exceptions pour les paquets applicatifs | Historique | Paquets non dépliés ; tailles omises dans /Applications |
 | Apparences claire et sombre | Captures | Couleurs et matériaux AppKit adaptatifs |
+| Langues multiples | Fiche App Store | Libellés français ; autres traductions non reproduites |
+| macOS 12+ pour l’original | Fiche App Store | macOS 14+ pour cette intégration Droppy |
 
 La matrice indique une correspondance fonctionnelle, pas une identité certifiée avec l’application originale. Le contenu exact des panneaux de réglages, leurs valeurs par défaut et certains comportements de bord ne sont pas publiquement observables. Les tests de notre code sont consignés dans `VALIDATION.md`.
 
